@@ -39,11 +39,13 @@ is made of instruments and structure, and the visuals should be too.
   bloom the same way they did last time, one generation older. Identity is
   seed lineage, never stored frames: one small row per track.
 - **Two scenes at once, mixed by the drums.** On top of the feedback-field
-  renderer, the scene overlay runs 25 self-contained shader scenes — lightning
-  veins, liquid metal, kaleido bloom, comet trails, eye of the storm — with a
-  second *accent* scene composited over the base whose opacity is played live
-  by kick/snare/vocal envelopes. It materializes on the hits and evaporates in
-  the quiet. A single MilkDrop preset structurally can't do that.
+  renderer, the scene overlay runs 29 self-contained shader scenes — lightning
+  veins, liquid metal, spiral galaxies, a night skyline that IS the equalizer —
+  with a second *accent* scene composited over the base whose opacity is played
+  live by kick/snare/vocal envelopes. It materializes on the hits and
+  evaporates in the quiet. And when a section boundary lands with a real energy
+  jump, the layer choreographs the drop: fast-cut, flash, accent surge. A
+  single MilkDrop preset structurally can't do any of that.
 
 The renderer itself is MilkDrop-class where it counts: an RGBA16F ping-pong
 feedback field with per-pixel radial warp profiles, per-channel RGB decay,
@@ -146,7 +148,7 @@ const webm = await rec.stop();       // → Blob
 |---|---|
 | `createEvilandRenderer(canvas, opts)` | WebGL2 renderer → `{ resize, render, setConfig, getConfig, setWaveform, dispose }` (or `null` when WebGL2 float is unavailable — fall back gracefully). |
 | `createEvilandReactor(cfg)` | 24-band causal onset reactor → `EvilandFrame` per `analyze()`. |
-| `createSceneOverlay(canvas, opts)` | 25 shader scenes + drum-driven accent layer on a transparent canvas. |
+| `createSceneOverlay(canvas, opts)` | 29 shader scenes + drum-driven accent layer + drop-finale choreography on a transparent canvas. |
 | `createReactorOverlay(canvas)` | Causal per-instrument 2D event layer. |
 | `extractArtPalette / blendPaletteWithArt` | Album-art dominant colors → palette tinting. |
 | `generate / mutate / encode / decode / ARCHETYPES` | Seedable generative looks. |
