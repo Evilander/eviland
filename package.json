@@ -1,0 +1,56 @@
+{
+  "name": "@eviland/core",
+  "version": "0.2.0",
+  "description": "Eviland — an instrument-aware, self-directing generative music visual engine with long-term visual memory. Zero-dependency WebGL2 renderer + 24-band causal onset reactor + operator engine + seedable randomizer + AI Director + 25 shader scenes with a drum-driven accent layer + album-art palettes. Embeddable like butterchurn, but it listens — and remembers.",
+  "type": "module",
+  "license": "MIT",
+  "author": "evilander",
+  "keywords": [
+    "visualizer",
+    "music",
+    "webgl",
+    "webgl2",
+    "audio",
+    "milkdrop",
+    "butterchurn",
+    "generative",
+    "vj",
+    "spectrum",
+    "oscilloscope",
+    "album-art",
+    "shader"
+  ],
+  "homepage": "https://github.com/Evilander/eviland",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Evilander/eviland.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Evilander/eviland/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
